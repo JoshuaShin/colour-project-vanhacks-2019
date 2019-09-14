@@ -4,12 +4,15 @@ import RGL, { WidthProvider } from "react-grid-layout";
 
 const ReactGridLayout = WidthProvider(RGL);
 
+// var numCards = 9;
 class Grid extends React.PureComponent {
+
+
     static defaultProps = {
         className: "layout",
         isDraggable: false,
         isResizable: false,
-        items: 50,
+        items: 100, //limit of how many cards in can be on the page.
         cols: 12,
         rowHeight: 30,
         onLayoutChange: function() {}
@@ -23,17 +26,17 @@ class Grid extends React.PureComponent {
     }
 
     generateDOM() {
-        return _.map(_.range(this.props.items), function(i) {
-            return (
-                <div key={i}>
-                    <span className="text">{i}</span>
-                </div>
-            );
-        });
+        return this.props.grid.map((grid) =>
+            <div key={grid.id}>
+            <span className="text">{grid.message}</span>
+        </div>);
+
     }
 
     generateLayout() {
         const p = this.props;
+
+
         return _.map(new Array(p.items), function(item, i) {
             var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1;
             return {
@@ -51,6 +54,9 @@ class Grid extends React.PureComponent {
     }
 
     render() {
+        console.log(this.props.grid.map((grid) => grid.message));
+        // var message = this.props.grid.message;
+
         return (
             <ReactGridLayout
                 layout={this.state.layout}

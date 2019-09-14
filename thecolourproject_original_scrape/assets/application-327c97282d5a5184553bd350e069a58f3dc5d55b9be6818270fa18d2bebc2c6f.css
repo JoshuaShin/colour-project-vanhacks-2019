@@ -1,0 +1,246 @@
+body {
+    font-family: 'Copse', serif;
+    background-color:#FF907B;
+}
+
+section {
+    padding: 10vh 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.input-container {
+    max-width: 200px;
+    padding: 5px;
+}
+
+
+#mainNav {
+    height: 15vh;
+    background-color:#FF907B;
+}
+
+.navbar-collapse{
+    opacity: 1;
+    background-color: #FF907B;
+    width: 100%;
+}
+
+.full-page-section {
+    height: 85vh;
+}
+
+.white-text {
+    color: #f2f5fb;
+}
+
+.signup-error {
+    color: white;
+    padding-bottom: 5px;
+}
+
+#logo-box {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-logo {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 3px;
+    background-color: #007BFF;
+    border: solid 4px #181010;
+    position: relative;
+    transition: 0.35s;
+}
+
+#title {
+    font-size: 4vh;
+    letter-spacing: 1.3px;
+    opacity: 0;
+    position: relative;
+    transition: 2s;
+    text-decoration: none;
+}
+
+#landing {
+    padding-top: 20vh;
+    text-align: center;
+}
+
+#colourful {
+    transition: 0.35s;
+    color: #53DED3;
+}
+
+footer {
+    height: 15vh;
+}
+
+footer > li >a:hover{
+  color: #16a3ee;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #landing {
+        padding-top: 10vh;
+        text-align: center;
+    }
+
+    #mainNav {
+        display: none;
+    }
+
+    #main-logo {
+        width: 3vh;
+        height: 3vh;
+    }
+
+    #title {
+        font-size: 3vh;
+    }
+
+    .full-page-section {
+        height: 100%;
+    }
+}
+body {
+    font-family: 'Copse', serif;
+}
+
+section {
+    padding: 20vh 0;
+
+    a {
+        color: #f2f5fb;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+
+    li a:hover{color: red;}
+}
+
+.input-container {
+    max-width: 200px;
+    padding: 5px;
+}
+
+
+#mainNav {
+    height: 15vh;
+    background-color:#F2F5FB;
+}
+
+.navbar-collapse{
+    opacity: 1;
+    background-color: #F2F5FB;
+    width: 100%;
+}
+
+.nav-item {
+    padding-left: 2vh;
+}
+
+.full-page-section {
+    height: 100vh;
+}
+
+.white-text {
+    color: #f2f5fb;
+}
+
+.social-media-icon {
+    width: 5.5vh;
+    height:5.5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.social-media-icon-donate {
+    width: 4vh;
+    height: 4vh;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+#logo-box {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-logo {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 3px;
+    background-color: white;
+    border: solid 4px #181010;
+    position: relative;
+    transition: 0.35s;
+}
+
+#title {
+    font-size: 4vh;
+    letter-spacing: 1.3px;
+    opacity: 0;
+    position: relative;
+    transition: 2s;
+}
+
+#landing {
+    padding-top: 35vh;
+    text-align: center;
+}
+
+#colourful {
+    transition: 0.35s;
+    color: "#53DED3";
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #beta {
+        height: 140vh;
+    }
+
+    #join {
+        height: 140vh;
+    }
+}
+
+#contact {
+    height: 65vh;
+}
+
+#privacy-policy {
+    padding-top: 5vh;
+}
+
+footer > li >a:hover{
+  color: #16a3ee;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

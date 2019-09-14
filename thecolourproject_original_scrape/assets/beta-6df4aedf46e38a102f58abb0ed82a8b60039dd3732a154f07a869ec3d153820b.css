@@ -1,0 +1,113 @@
+body {
+    font-family: 'Copse', serif;
+    background-color:#FF907B;
+}
+
+section {
+    padding: 10vh 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.input-container {
+    max-width: 200px;
+    padding: 5px;
+}
+
+
+#mainNav {
+    height: 15vh;
+    background-color:#FF907B;
+}
+
+.navbar-collapse{
+    opacity: 1;
+    background-color: #FF907B;
+    width: 100%;
+}
+
+.full-page-section {
+    height: 85vh;
+}
+
+.white-text {
+    color: #f2f5fb;
+}
+
+.signup-error {
+    color: white;
+    padding-bottom: 5px;
+}
+
+#logo-box {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-logo {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 3px;
+    background-color: #007BFF;
+    border: solid 4px #181010;
+    position: relative;
+    transition: 0.35s;
+}
+
+#title {
+    font-size: 4vh;
+    letter-spacing: 1.3px;
+    opacity: 0;
+    position: relative;
+    transition: 2s;
+    text-decoration: none;
+}
+
+#landing {
+    padding-top: 20vh;
+    text-align: center;
+}
+
+#colourful {
+    transition: 0.35s;
+    color: #53DED3;
+}
+
+footer {
+    height: 15vh;
+}
+
+footer > li >a:hover{
+  color: #16a3ee;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #landing {
+        padding-top: 10vh;
+        text-align: center;
+    }
+
+    #mainNav {
+        display: none;
+    }
+
+    #main-logo {
+        width: 3vh;
+        height: 3vh;
+    }
+
+    #title {
+        font-size: 3vh;
+    }
+
+    .full-page-section {
+        height: 100%;
+    }
+}

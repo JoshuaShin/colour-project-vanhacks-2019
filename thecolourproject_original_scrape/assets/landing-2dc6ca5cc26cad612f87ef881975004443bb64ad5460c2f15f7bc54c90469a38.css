@@ -1,0 +1,117 @@
+body {
+    font-family: 'Copse', serif;
+}
+
+section {
+    padding: 20vh 0;
+
+    a {
+        color: #f2f5fb;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+
+    li a:hover{color: red;}
+}
+
+.input-container {
+    max-width: 200px;
+    padding: 5px;
+}
+
+
+#mainNav {
+    height: 15vh;
+    background-color:#F2F5FB;
+}
+
+.navbar-collapse{
+    opacity: 1;
+    background-color: #F2F5FB;
+    width: 100%;
+}
+
+.nav-item {
+    padding-left: 2vh;
+}
+
+.full-page-section {
+    height: 100vh;
+}
+
+.white-text {
+    color: #f2f5fb;
+}
+
+.social-media-icon {
+    width: 5.5vh;
+    height:5.5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.social-media-icon-donate {
+    width: 4vh;
+    height: 4vh;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+#logo-box {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-logo {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 3px;
+    background-color: white;
+    border: solid 4px #181010;
+    position: relative;
+    transition: 0.35s;
+}
+
+#title {
+    font-size: 4vh;
+    letter-spacing: 1.3px;
+    opacity: 0;
+    position: relative;
+    transition: 2s;
+}
+
+#landing {
+    padding-top: 35vh;
+    text-align: center;
+}
+
+#colourful {
+    transition: 0.35s;
+    color: "#53DED3";
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #beta {
+        height: 140vh;
+    }
+
+    #join {
+        height: 140vh;
+    }
+}
+
+#contact {
+    height: 65vh;
+}
+
+#privacy-policy {
+    padding-top: 5vh;
+}
+
+footer > li >a:hover{
+  color: #16a3ee;
+  text-decoration: none;
+}

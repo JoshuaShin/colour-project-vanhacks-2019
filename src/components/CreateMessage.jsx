@@ -1,109 +1,132 @@
 import React, { Component } from 'react';
 import Popup from "reactjs-popup";
-import { Form, TextArea, Button, Segment } from 'semantic-ui-react'
+import { Form, TextArea, Button, Segment, Header } from 'semantic-ui-react'
 
 export default class CreateMessage extends Component {
 
     yourStory = "";
 
     constructor (props) {
-        super(props)
+        super(props);
         this.state = {
             inputValue: '',
             backgroundColor: '',
+            yourMessage: '',
+            yourColor: ''
         }
-    }
+    };
 
-    onChange(inputEntry) {
-        if (inputEntry) {
-            this.setState({inputValue: inputEntry, backgroundColor: '#FF0000'}) // here I want to change the color to red
-        } else {
-            this.setState({inputValue: inputEntry, backgroundColor: ''}) // leave empty for default
-        }
-    }
+    saveMessage = message => {
+        //this.setState({ yourMessage });
+        this.setState({ yourMessage: message.target.value.substr(0, 100) });
+
+        //this.state.yourMessage = message;
+    };
+
+    saveColor = color => {
+        //this.setState({ yourMessage });
+        this.setState({ yourColor: color });
+
+        //this.state.yourMessage = color;
+    };
+
+    onSubmit = () => {
+        // this.setState();
+    };
 
     render() {
         const { backgroundColor } = this.state;
+        const { yourMessage } = this.state;
+        const { yourColor } = this.state;
 
         return (
-            <Popup trigger={<button className="button"> Open Modal </button>} modal>
+            <Popup trigger={<Button className="button"> new message </Button>} modal>
                 {close => (
-                    <div className="modal" style={{backgroundColor: backgroundColor}}>
+                    <div className="modal">
+                        {/*<div className="modal" style={{backgroundColor: backgroundColor}}>*/}
 
 
-                        /* ===== Directions ===== */
+                        {/* ===== Directions ===== */}
 
                         {/*<a className="close" onClick={close}>*/}
                         {/*    &times;*/}
                         {/*</a>*/}
                         {/*<div className="header"> Title </div>*/}
                         <div className="content">
-                            {" "}
-                            Share your story with us!
+                            <Header as='h1' style={{color: "#36454f"}}> Share your story with us! </Header>
                         </div>
 
 
-                        /* ===== Input fields ===== */
+                        {/* ===== Input fields ===== */}
 
                         <Form>
-                            <label>*Your Story</label>
-                            <TextArea placeholder='Your story' style={{ minHeight: 100 }} />
+                            {/*<label>*Your Story</label>*/}
+                            {/*onChange={ () => this.saveText( { "textMessage" } ) }*/}
+                            <TextArea
+                                placeholder='Your story'
+                                style={{ minHeight: 100 }}
+                                defaultValue={yourMessage}
+                                onChange={ this.saveMessage }
+                            />
                             <br />
                             <br />
-                            <label>Contact</label>
-                            <input placeholder='Email' />
+                            {/*<label>Contact</label>*/}
+                            {/*<input placeholder='Email' />*/}
+                            {/*<br />*/}
+                            {/*<br />*/}
                         </Form>
 
 
-                        /* ===== Color selection ===== */
+                        {/* ===== Color selection ===== */}
 
                         <div>
                             <Segment>
                                 <Button
                                     inverted color='red'
                                     onClick={() => {
-                                        this.setState({backgroundColor: '#ff695e'}) // here I want to change the color to red
+                                        this.setState({backgroundColor: '#ff695e'});
+                                        this.saveColor('#ff695e');
                                     }}
                                 >
-                                    Anger
+                                    anger
                                 </Button>
                                 <Button
                                     inverted color='yellow'
                                     onClick={() => {
-                                        this.setState({backgroundColor: '#ffe21f'}) // here I want to change the color to red
+                                        this.setState({backgroundColor: '#ffe21f'})
                                     }}
                                 >
-                                    Joy
+                                    joy
                                 </Button>
                                 <Button
                                     inverted color='green'
                                     onClick={() => {
-                                        this.setState({backgroundColor: '#2ecc40'}) // here I want to change the color to red
+                                        this.setState({backgroundColor: '#2ecc40'})
                                     }}
                                 >
-                                    Peace
+                                    peace
                                 </Button>
                                 <Button
                                     inverted color='blue'
                                     onClick={() => {
-                                        this.setState({backgroundColor: '#54c8ff'}) // here I want to change the color to red
+                                        this.setState({backgroundColor: '#54c8ff'})
                                     }}
                                 >
-                                    Sad
+                                    sad
                                 </Button>
                                 <Button
                                     inverted color='violet'
                                     onClick={() => {
-                                        this.setState({backgroundColor: '#a291fb'}) // here I want to change the color to red
+                                        this.setState({backgroundColor: '#a291fb'})
                                     }}
                                 >
-                                    Anxious
+                                    anxious
                                 </Button>
                             </Segment>
                         </div>
 
 
-                        /* ===== Submit button ===== */
+                        {/* ===== Submit button ===== */}
 
                         <div className="actions">
                             {/*<Popup*/}
@@ -118,7 +141,7 @@ export default class CreateMessage extends Component {
                             {/*      sapiente! Laudantium, aperiam doloribus. Odit, aut.*/}
                             {/*    </span>*/}
                             {/*</Popup>*/}
-                            <button
+                            <Button
                                 className="button"
                                 onClick={() => {
                                     this.setState({backgroundColor: '#ffffff'}) // here I want to change the color to red
@@ -126,7 +149,7 @@ export default class CreateMessage extends Component {
                                 }}
                             >
                                 submit
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 )}

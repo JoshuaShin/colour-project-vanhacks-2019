@@ -88,8 +88,8 @@ export default class CreateMessage extends Component {
                             {/*<label>*Your Story</label>*/}
                             {/*onChange={ () => this.saveText( { "textMessage" } ) }*/}
                             <TextArea
+                                style={{minHeight: 250, backgroundColor: "#f2f5fb"}}
                                 placeholder='Your story'
-                                style={{ minHeight: 250 }}
                                 defaultValue={yourMessage}
                                 onChange={ this.saveMessage }
                             />

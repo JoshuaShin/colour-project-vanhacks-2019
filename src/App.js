@@ -24,7 +24,8 @@ class App extends Component {
             for (let card in cards) {
                 newState.push({
                     id: card,
-                    message: cards[card].message
+                    message: cards[card].message,
+                    color: cards[card].colour
                 });
             }
             this.setState({

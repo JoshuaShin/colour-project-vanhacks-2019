@@ -1,4 +1,6 @@
 import React from "react";
+import CreateMessage from "./CreateMessage";
+
 
 class NavBar extends React.Component {
     navBarStyle = {
@@ -8,18 +10,21 @@ class NavBar extends React.Component {
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        textAlign: 'right',
+        padding: '10px',
         background: 'linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%)',
         zIndex: '98',
     };
 
     render() {
-        function handleClickk(e) {
+        function handleClick(e) {
             e.preventDefault();
             console.log('The link was clicked.');
         }
         return (
             <div style={this.navBarStyle} className={'navBar'}>
-                <a className={'addButton'} href={{href:'#'}} onClick={handleClickk}> + </a>
+                <CreateMessage />
+                {/*<a className={'addButton'} href={{href:'#'}} onClick={handleClick}> + </a>*/}
             </div>
 
         )

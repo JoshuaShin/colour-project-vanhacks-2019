@@ -1,6 +1,7 @@
 import React, { Component, createRef } from 'react';
 import Popup from "reactjs-popup";
 import { Form, TextArea, Button, Segment, Header, Dropdown } from 'semantic-ui-react'
+import * as firebase from 'firebase';
 
 export default class CreateMessage extends Component {
     modalDivRef = createRef();
@@ -30,8 +31,24 @@ export default class CreateMessage extends Component {
         }
     };
 
+
+
     onSubmit = () => {
+        let newCard = {};
+        const cardRoot = firebase.database().ref('cards');
+        cardRoot.once('value', (snapshot) => {
+            let cards = snapshot.val();
+            let cardId = cards.length;
+            console.log(cardId);
+            newCard.id = cardId + 1;
+            const cardRootNum = firebase.database().ref('cards').child(cardId);
+            newCard.colour = this.state.yourColor;
+            newCard.message = this.state.yourMessage;
+
+            cardRootNum.update(newCard);
+        });
         console.log(this.state.yourMessage + this.state.yourColor);
+        console.log(newCard);
     };
 
     randomGreet = () => {

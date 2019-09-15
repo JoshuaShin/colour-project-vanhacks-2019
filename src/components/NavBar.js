@@ -25,7 +25,7 @@ class NavBar extends React.Component {
         return (
             <div style={this.navBarStyle} className={'navBar'}>
                 <Logo/>
-                <a className={'addButton'} href={{href:'#'}} onClick={handleClickk}> + </a>
+                <a className={'addButton'} href={{href:'#'}} onClick={handleClick}> + </a>
                 <CreateMessage />
 
             </div>

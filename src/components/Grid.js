@@ -33,9 +33,13 @@ class Grid extends React.PureComponent {
             <a key={grid.id} href="#" onClick={handleClick} ref={(el) => {
                 if (el) {
                     el.style.setProperty('background-color', grid.color, 'important')
+                    /*background: linear-gradient(to bottom, #F7CAC9 10%, #F7786B 100%);*/
+                    // el.style.setProperty('background', 'linear-gradient(to bottom, #f2f5fb 0% , ' +grid.color+' 10%)', 'important')
+
                 }
             }}>
             <span className="text">{grid.message}</span>
+                <div className={'cover'}> </div>
         </a>);
 
     }
@@ -43,7 +47,7 @@ class Grid extends React.PureComponent {
     generateLayout() {
         const p = this.props;
         return _.map(new Array(p.items), function(item, i) {
-            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 2.5;
+            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1.7;
             return {
                 x: (i * 2) % 10,
                 y: Math.floor(i / 5) * y,

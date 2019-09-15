@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         justifyContent: 'center',
         textAlign: 'right',
         padding: '10px',
-        background: 'linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%)',
+        background: 'linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.01) 100%)',
         zIndex: '98',
     };
 

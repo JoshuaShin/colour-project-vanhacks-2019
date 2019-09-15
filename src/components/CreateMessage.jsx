@@ -78,7 +78,7 @@ export default class CreateMessage extends Component {
                         {/*</a>*/}
                         {/*<div className="header"> Title </div>*/}
                         <div className="content">
-                            <Header as='h1' style={{color: "#212529", marginTop: '8px', marginBottom: '16px'}}> {this.randomGreet()} </Header>
+                            <Header as='h1' style={{color: "#212529", marginTop: '8px', marginBottom: '16px', fontFamily: 'Copse'}}> {this.randomGreet()} </Header>
                         </div>
 
 

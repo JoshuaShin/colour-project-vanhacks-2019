@@ -13,10 +13,10 @@ class BtnToTop extends React.Component {
         textDecoration: 'none',
         height: '0',
         width: '0',
-        borderTop: '30px solid transparent',
-        borderBottom: '30px solid rgba(0,0,0,0.5)',
-        borderLeft: '15px solid transparent',
-        borderRight: '15px solid transparent'
+        borderTop: '20px solid transparent',
+        borderBottom: '20px solid rgba(0,0,0,0.9)',
+        borderLeft: '9px solid transparent',
+        borderRight: '9px solid transparent'
     };
     render() {
         function handleClick(e) {
@@ -26,7 +26,7 @@ class BtnToTop extends React.Component {
             document.documentElement.scrollTop = 0;
         }
         return (
-            <a href={{href:'#'}} style={this.toTop} onClick={handleClick}> </a>
+            <a className={'toTop'} href={{href:'#'}} style={this.toTop} onClick={handleClick}> </a>
         )
     }
 }

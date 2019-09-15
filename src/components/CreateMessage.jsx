@@ -255,7 +255,6 @@ export default class CreateMessage extends Component {
 
                         {/* ===== Submit button ===== */}
                         <br />
-                        <br />
                         <div className="actions">
                             {/*<Popup*/}
                             {/*    trigger={<button className="button"> color </button>}*/}
@@ -270,6 +269,7 @@ export default class CreateMessage extends Component {
                             {/*    </span>*/}
                             {/*</Popup>*/}
                             <Button
+                                size='large'
                                 disabled={!this.state.ready || !this.state.yourMessage}
                                 className="button"
                                 onClick={() => {

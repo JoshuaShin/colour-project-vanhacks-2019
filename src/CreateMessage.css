@@ -1,59 +1,124 @@
+/*.modalGreen.modalBlue.modalViolet.modalPink.modalYellow.modalOrange.modalRed.modalGrey*/
 
 .modalGreen {
     transition: background-color 0.5s ease;
     background-color: #b5eecd;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalBlue {
     transition: background-color 0.5s ease;
     background-color: #b4d3e8;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalViolet {
     transition: background-color 0.5s ease;
     background-color: #ddc5e7;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalPink {
     transition: background-color 0.5s ease;
     background-color: #efc7de;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalYellow {
     transition: background-color 0.5s ease;
     background-color: #faeba6;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalOrange {
     transition: background-color 0.5s ease;
     background-color: #f6d2ae;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalRed {
     transition: background-color 0.5s ease;
     background-color: #f8c1ba;
+    padding: 12px;
+    font-size: 12px;
 }
 .modalGrey {
     transition: background-color 0.5s ease;
     background-color: #C6CBD2;
-}
-
-.modal {
-    padding: 20px;
+    padding: 12px;
     font-size: 12px;
 }
-.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .header {
+.modal {
+    padding: 12px;
+    font-size: 12px;
+}
+
+.modal.modalGreen.modalBlue.modalViolet.modalPink.modalYellow.modalOrange.modalRed.modalGrey > .header {
     width: 100%;
     border-bottom: 1px solid gray;
     font-size: 18px;
     text-align: center;
     padding: 5px;
 }
-.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .content {
+.modal.modalGreen.modalBlue.modalViolet.modalPink.modalYellow.modalOrange.modalRed.modalGrey > .content {
     width: 100%;
     padding: 10px 5px;
 }
-.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .actions {
+.modal > .actions {
     width: 100%;
     padding: 10px 5px;
     margin: auto;
     text-align: center;
 }
-.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .close {
+.modalGreen > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalBlue > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalViolet > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalPink > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalYellow > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalOrange > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalRed > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modalGrey > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modal.modalGreen.modalBlue.modalViolet.modalPink.modalYellow.modalOrange.modalRed.modalGrey > .close {
     cursor: pointer;
     position: absolute;
     display: block;

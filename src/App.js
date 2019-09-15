@@ -15,11 +15,10 @@ class App extends Component {
         };
     }
 
-
     componentDidMount() {
         const cardRoot = firebase.database().ref('cards');
 
-        cardRoot.on('value', (snapshot) => {
+        cardRoot.once('value', (snapshot) => {
             let cards = snapshot.val();
             let newState = [];
             for (let card in cards) {
@@ -39,13 +38,8 @@ class App extends Component {
         return (
             <div className="App">
                 <NavBar> </NavBar>
-                <Grid grid={this.state.card}/>
-                <BtnToTop> </BtnToTop>
-                {console.log(this.state2)}
-
-                {console.log(this.state)}
-
                 {this.state.dataAvail && <Grid grid={this.state.card} />}
+                <BtnToTop> </BtnToTop>
             </div>
         );
     }

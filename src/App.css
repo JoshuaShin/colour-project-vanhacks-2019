@@ -4,38 +4,37 @@ body {
 
 .App {
     position: absolute;
-    height: 400%;
+    height: 200%;
     width: 100%;
     /*background: linear-gradient(to bottom, #F7CAC9 10%, #F7786B 100%);*/
-
     z-index: 0;
+
+
 }
 
-#content {
-    width: 100%;
-    z-index: 0;
-}
 .react-grid-layout {
     position: relative;
+    width: 100%;
     background: transparent;
     z-index: 1;
 }
-.layoutJSON {
-    background: #ddd;
-    border: 1px solid black;
-    margin-top: 10px;
-    padding: 10px;
-    z-index: 1;
-}
-.columns {
-    -moz-columns: 120px;
-    -webkit-columns: 120px;
-    columns: 120px;
-    z-index: 1;
-}
+/*.layoutJSON {*/
+/*    background: #ddd;*/
+/*    border: 1px solid black;*/
+/*    margin-top: 10px;*/
+/*    padding: 10px;*/
+/*    z-index: 1;*/
+/*}*/
+/*.columns {*/
+/*    -moz-columns: 120px;*/
+/*    -webkit-columns: 120px;*/
+/*    columns: 120px;*/
+/*    z-index: 1;*/
+/*}*/
 .react-grid-item {
     box-sizing: border-box;
-    top: 69px
+    top: 69px;
+    border: 2px solid black;
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +51,7 @@ body {
 /* ========================================================================================== */
 .react-grid-item:not(.react-grid-placeholder) {
     /*background: #EAE6DA;*/
+    background-color: white;
     transition: transform .2s;
     scroll-behavior: smooth;
     overflow: auto;
@@ -76,8 +76,6 @@ body {
     border-radius: 3px;
     -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.0),inset 0 -1px 0 rgba(69,69,69,0.0);
 }
-
-
 
 /* Card effects*/
 .react-grid-item:not(.react-grid-placeholder):focus{

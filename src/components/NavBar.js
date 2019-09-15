@@ -1,4 +1,6 @@
 import React from "react";
+import Logo from './logo.js'
+
 
 class NavBar extends React.Component {
     navBarStyle = {
@@ -19,6 +21,7 @@ class NavBar extends React.Component {
         }
         return (
             <div style={this.navBarStyle} className={'navBar'}>
+                <Logo/>
                 <a className={'addButton'} href={{href:'#'}} onClick={handleClickk}> + </a>
             </div>
 

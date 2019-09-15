@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from './components/Grid'
 import BtnToTop from './components/BtnToTop'
 import NavBar from './components/NavBar'
+
 import './App.css';
 import './css/style.css'
 import * as firebase from 'firebase';
@@ -35,9 +36,10 @@ class App extends Component {
     }
 
     render() {
+
         return (
             <div className="App">
-                <NavBar> </NavBar>
+                <NavBar></NavBar>
                 {this.state.dataAvail && <Grid grid={this.state.card} />}
                 <BtnToTop> </BtnToTop>
             </div>

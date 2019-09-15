@@ -48,7 +48,7 @@ export default class CreateMessage extends Component {
         const { yourColor } = this.state;
 
         return (
-            <Popup trigger={<Button className="button"> new message </Button>} modal>
+            <Popup trigger={<Button className="button"> New </Button>} modal>
                 {close => (
                     <div className="modal" ref={this.modalDivRef} style={{backgroundColor: this.yourColor}}>
                     {/*<div className="modal" ref={this.modalDivRef} >*/}

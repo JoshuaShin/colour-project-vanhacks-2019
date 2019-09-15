@@ -4,7 +4,6 @@ import './index.css';
 import App from  './App';
 import * as firebase from 'firebase';
 import './CreateMessage.css';
-import CreateMessage from "./components/CreateMessage";
 
 var config = {
     apiKey: "AIzaSyCyMLAjq-lqu-hmHLNPx7vWOSWhClBhF7I",

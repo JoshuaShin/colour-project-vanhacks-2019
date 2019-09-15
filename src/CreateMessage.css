@@ -1,23 +1,44 @@
-.modalRed {
+.modalTeal {
     transition: background-color 0.5s ease;
-    background-color: #f8c1ba;
+    background-color: #ace8dc;
+}
+.modalGreen {
+    transition: background-color 0.5s ease;
+    background-color: #b5eecd;
+}
+.modalBlue {
+    transition: background-color 0.5s ease;
+    background-color: #b7dbf3;
+}
+.modalViolet {
+    transition: background-color 0.5s ease;
+    background-color: #ddc5e7;
+}
+.modalPink {
+    transition: background-color 0.5s ease;
+    background-color: #efc7de;
 }
 .modalYellow {
     transition: background-color 0.5s ease;
     background-color: #faeba6;
 }
-.modalGreen {
+.modalOrange {
     transition: background-color 0.5s ease;
-    background-color: green;
+    background-color: #f6d2ae;
 }
-.modalBlue {
+.modalRed {
     transition: background-color 0.5s ease;
-    background-color: blue;
+    background-color: #f8c1ba;
 }
-.modalViolet {
+.modalGrey {
     transition: background-color 0.5s ease;
-    background-color: violet;
+    background-color: #dbe1e1;
 }
+.modalBlack {
+    transition: background-color 0.5s ease;
+    background-color: #b8bfc7;
+}
+
 .modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet {
     padding: 12px;
     font-size: 12px;

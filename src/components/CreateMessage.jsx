@@ -96,7 +96,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#ace8dc'});
                                             this.saveColor('#ace8dc');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalRed";
+                                            this.modalDivRef.current.className = "modalTeal";
                                             // this.focusRed();
                                         }}
                                         // onBlur={this.focusRed}
@@ -110,7 +110,7 @@ export default class CreateMessage extends Component {
                                             this.saveColor('#b5eecd');
                                             this.updateButton();
 
-                                            this.modalDivRef.current.className = "modalYellow";
+                                            this.modalDivRef.current.className = "modalGreen";
 
                                             // this.focusYellow();
                                         }}
@@ -125,7 +125,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#b7dbf3'})
                                             this.saveColor('#b7dbf3');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalGreen";
+                                            this.modalDivRef.current.className = "modalBlue";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -139,7 +139,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#ddc5e7'});
                                             this.saveColor('#ddc5e7');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalBlue";
+                                            this.modalDivRef.current.className = "modalViolet";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -153,7 +153,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#efc7de'})
                                             this.saveColor('#efc7de');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalViolet";
+                                            this.modalDivRef.current.className = "modalPink";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -169,7 +169,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#faeba6'});
                                             this.saveColor('#faeba6');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalRed";
+                                            this.modalDivRef.current.className = "modalYellow";
                                             // this.focusRed();
                                         }}
                                         // onBlur={this.focusRed}
@@ -183,7 +183,7 @@ export default class CreateMessage extends Component {
                                             this.saveColor('#f6d2ae');
                                             this.updateButton();
 
-                                            this.modalDivRef.current.className = "modalYellow";
+                                            this.modalDivRef.current.className = "modalOrange";
 
                                             // this.focusYellow();
                                         }}
@@ -198,7 +198,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#f8c1ba'})
                                             this.saveColor('#f8c1ba');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalGreen";
+                                            this.modalDivRef.current.className = "modalRed";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -212,7 +212,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#dbe1e1'})
                                             this.saveColor('#dbe1e1');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalBlue";
+                                            this.modalDivRef.current.className = "modalGrey";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -226,7 +226,7 @@ export default class CreateMessage extends Component {
                                             this.setState({backgroundColor: '#b8bfc7'})
                                             this.saveColor('#b8bfc7');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalViolet";
+                                            this.modalDivRef.current.className = "modalBlack";
 
                                         }}
                                         // onBlur={this.lockButton}

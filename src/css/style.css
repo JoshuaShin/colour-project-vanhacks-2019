@@ -1,4 +1,4 @@
-html {
+html, body {
     scroll-behavior: smooth;
 }
 
@@ -6,11 +6,34 @@ html {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    background: linear-gradient(to top right, #cc99ff 0%, #FF6F61 100%);
+    background: linear-gradient(to top right, #cc99ff 0%, #FF6F61 100%)!important;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: rgba(69, 69, 69, 0.4);
     border-radius: 3px;
-    -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.5),inset 0 -1px 0 rgba(69,69,69,0.5);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.1),inset 0 -1px 0 rgba(69,69,69,0.1);
 }
+
+.addButton {
+    position: fixed;
+    right: 12px;
+    top: 10px;
+    height: 69px;
+    width: 69px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 42px;
+
+}
+
+.addButton:hover {
+    background-color: red;
+    color: black;
+}
+

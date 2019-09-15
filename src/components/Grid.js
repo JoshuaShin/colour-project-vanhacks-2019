@@ -26,10 +26,15 @@ class Grid extends React.PureComponent {
     }
 
     generateDOM() {
+        function handleClick(e) {
+            e.preventDefault();
+            console.log('The link was clicked.');
+        }
+
         return this.props.grid.map((grid) =>
-            <div key={grid.id}>
+            <a key={grid.id} href="#" onClick={handleClick}>
             <span className="text">{grid.message}</span>
-        </div>);
+        </a>);
 
     }
 

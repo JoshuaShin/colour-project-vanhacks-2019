@@ -47,7 +47,7 @@ class Grid extends React.PureComponent {
     generateLayout() {
         const p = this.props;
         return _.map(new Array(p.items), function(item, i) {
-            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1.7;
+            let y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1.7;
             return {
                 x: (i * 2) % 10,
                 y: Math.floor(i / 5) * y,

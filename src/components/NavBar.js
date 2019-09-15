@@ -18,14 +18,10 @@ class NavBar extends React.Component {
     };
 
     render() {
-        function handleClick(e) {
-            e.preventDefault();
-            console.log('The link was clicked.');
-        }
+
         return (
             <div style={this.navBarStyle} className={'navBar'}>
                 <Logo/>
-                {/*<a className={'addButton'} href={{href:'#'}} onClick={handleClick}> + </a>*/}
                 <CreateMessage />
 
             </div>

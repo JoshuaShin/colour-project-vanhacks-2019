@@ -32,8 +32,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -50,7 +50,7 @@ body {
     text-decoration: none;
     color: black;
     outline : none;
-    border: 0px solid #999;
+    border: 0 solid #999;
     border-radius: 2px;
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     font-family: arial, sans-serif;
@@ -60,8 +60,8 @@ body {
 }
 
 .react-grid-item:not(.react-grid-placeholder)::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     background: linear-gradient(to top, transparent 0%, transparent 100%);
 }
 

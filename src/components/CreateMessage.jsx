@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import Popup from "reactjs-popup";
-import { Form, TextArea, Button, Segment, Header, Dropdown } from 'semantic-ui-react'
+import { Form, TextArea, Button, Header } from 'semantic-ui-react'
 import * as firebase from 'firebase';
 
 export default class CreateMessage extends Component {
@@ -62,7 +62,6 @@ export default class CreateMessage extends Component {
 
     render() {
         const { yourMessage } = this.state;
-        const { yourColor } = this.state;
 
         return (
             <Popup trigger={<a className={'addButton'} > + </a>} modal>
@@ -124,7 +123,7 @@ export default class CreateMessage extends Component {
                                         style={{backgroundColor: '#efc7de'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#efc7de'})
+                                            this.setState({backgroundColor: '#efc7de'});
                                             this.saveColor('#efc7de');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalPink";
@@ -137,7 +136,7 @@ export default class CreateMessage extends Component {
                                     <Button
                                         style={{backgroundColor: '#b5eecd'}}
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#b5eecd'})
+                                            this.setState({backgroundColor: '#b5eecd'});
                                             this.saveColor('#b5eecd');
                                             this.updateButton();
 
@@ -153,7 +152,7 @@ export default class CreateMessage extends Component {
                                         style={{backgroundColor: '#b4d3e8'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#b4d3e8'})
+                                            this.setState({backgroundColor: '#b4d3e8'});
                                             this.saveColor('#b4d3e8');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalBlue";
@@ -196,7 +195,7 @@ export default class CreateMessage extends Component {
                                     <Button
                                         style={{backgroundColor: '#f6d2ae'}}
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#f6d2ae'})
+                                            this.setState({backgroundColor: '#f6d2ae'});
                                             this.saveColor('#f6d2ae');
                                             this.updateButton();
 
@@ -212,7 +211,7 @@ export default class CreateMessage extends Component {
                                         style={{backgroundColor: '#f8c1ba'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#f8c1ba'})
+                                            this.setState({backgroundColor: '#f8c1ba'});
                                             this.saveColor('#f8c1ba');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalRed";
@@ -240,7 +239,7 @@ export default class CreateMessage extends Component {
                                         style={{backgroundColor: '#C6CBD2'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#C6CBD2'})
+                                            this.setState({backgroundColor: '#C6CBD2'});
                                             this.saveColor('#C6CBD2');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalGrey";

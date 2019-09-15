@@ -16,7 +16,7 @@ class Logo extends React.Component {
 
     render() {
         return (
-            <div className={'animate'} style={this.logoStyle} onClick={this.updateColor}>
+            <div className={'animate'} style={this.logoStyle}>
             </div>
         )
     }

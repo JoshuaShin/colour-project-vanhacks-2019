@@ -1,32 +1,57 @@
 body {
-    background: white;
-    padding: 20px;
-    overflow: scroll;
-}
-#content {
     width: 100%;
 }
+
+.App {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    /*background: linear-gradient(to bottom, #F7CAC9 10%, #F7786B 100%);*/
+    z-index: 0;
+
+
+}
+
 .react-grid-layout {
-    background: #eee;
+    position: relative;
+    width: 100%;
+    background: transparent;
+    z-index: 1;
 }
-.layoutJSON {
-    background: #ddd;
-    border: 1px solid black;
-    margin-top: 10px;
-    padding: 10px;
-}
-.columns {
-    -moz-columns: 120px;
-    -webkit-columns: 120px;
-    columns: 120px;
-}
+/*.layoutJSON {*/
+/*    background: #ddd;*/
+/*    border: 1px solid black;*/
+/*    margin-top: 10px;*/
+/*    padding: 10px;*/
+/*    z-index: 1;*/
+/*}*/
+/*.columns {*/
+/*    -moz-columns: 120px;*/
+/*    -webkit-columns: 120px;*/
+/*    columns: 120px;*/
+/*    z-index: 1;*/
+/*}*/
 .react-grid-item {
     box-sizing: border-box;
+    top: 69px;
+    border: 2px solid black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #F7CAC9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F7786B;
+    border-radius: 3px;
 }
 
 /* ========================================================================================== */
 .react-grid-item:not(.react-grid-placeholder) {
-    background: #ccc;
+    /*background: #EAE6DA;*/
+    background-color: white;
     transition: transform .2s;
     scroll-behavior: smooth;
     overflow: auto;
@@ -37,6 +62,7 @@ body {
     border-radius: 5px;
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     font-family: arial, sans-serif;
+    transition-duration: 400ms;
 }
 
 .react-grid-item:not(.react-grid-placeholder)::-webkit-scrollbar {
@@ -51,11 +77,15 @@ body {
     -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.0),inset 0 -1px 0 rgba(69,69,69,0.0);
 }
 
-
-
 /* Card effects*/
-.react-grid-item:not(.react-grid-placeholder):hover{
-    transform: scale(1.5)!important;
+.react-grid-item:not(.react-grid-placeholder):focus{
+    transform: translate(40vw, 30vh) scale(1.5)!important;
+    border-bottom: 5px solid #F7786B;
+    transition-duration: 0.7s;
+    z-index: 98;
+}
+.react-grid-item:not(.react-grid-placeholder):hover {
+    border-bottom: 5px solid #F7786B;
 }
 
 .react-grid-item:not(.react-grid-placeholder):hover::-webkit-scrollbar-thumb,
@@ -81,7 +111,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 10px;
     height: 24px;
 }
 .react-grid-item .minMax {
@@ -89,12 +119,6 @@ body {
 }
 .react-grid-item .add {
     cursor: pointer;
-}
-.react-grid-dragHandleExample {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
 }
 li b {
     font-size: 19px;

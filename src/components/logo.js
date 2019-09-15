@@ -23,49 +23,49 @@ class Logo extends React.Component {
         // borderRight: '15px solid transparent'
     };
 
-    updateColor(){
-        var TURQUOISE = "#53DED3";
-        var PURPLE = "#b460ec";
-        var RED = "#ff0027";
-        var BRIGHT_PINK = "#ff377e";
-        var YELLOW = "#cfec60";
-        var GREEN = "#109876";
-        var LIGHT_BLUE = "#007BFF";
-        var WHITE = "#F2F5FB";
-        var COLOURS = [
-            TURQUOISE,
-            BRIGHT_PINK,
-            GREEN,
-            PURPLE,
-            YELLOW,
-            RED,
-        ];
-        var id = setInterval(changeColor, 500);
-        console.log("click");
-
-        var i = -1;
-        var length = COLOURS.length;
-
-        function changeColor() {
-            if (i < 0) {
-                i++
-            } else if (i >= length) {
-                this.logoStyle({
-                    backgroundColor: "",
-                    borderColor: ""
-                });
-
-                clearInterval(id);
-
-            } else {
-                this.logoStyle({
-                    backgroundColor: COLOURS[i]});
-                i++;
-            }
-        }
-
-
-    }
+    // updateColor(){
+    //     var TURQUOISE = "#53DED3";
+    //     var PURPLE = "#b460ec";
+    //     var RED = "#ff0027";
+    //     var BRIGHT_PINK = "#ff377e";
+    //     var YELLOW = "#cfec60";
+    //     var GREEN = "#109876";
+    //     var LIGHT_BLUE = "#007BFF";
+    //     var WHITE = "#F2F5FB";
+    //     var COLOURS = [
+    //         TURQUOISE,
+    //         BRIGHT_PINK,
+    //         GREEN,
+    //         PURPLE,
+    //         YELLOW,
+    //         RED,
+    //     ];
+    //     var id = setInterval(changeColor, 500);
+    //     console.log("click");
+    //
+    //     var i = -1;
+    //     var length = COLOURS.length;
+    //
+    //     function changeColor() {
+    //         if (i < 0) {
+    //             i++
+    //         } else if (i >= length) {
+    //             this.logoStyle({
+    //                 backgroundColor: "",
+    //                 borderColor: ""
+    //             });
+    //
+    //             clearInterval(id);
+    //
+    //         } else {
+    //             this.logoStyle({
+    //                 backgroundColor: COLOURS[i]});
+    //             i++;
+    //         }
+    //     }
+    //
+    //
+    // }
 
 
 

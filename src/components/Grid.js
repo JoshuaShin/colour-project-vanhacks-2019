@@ -12,7 +12,7 @@ class Grid extends React.PureComponent {
         isDraggable: false,
         isResizable: false,
         items: 100, //limit of how many cards in can be on the page.
-        cols: 12,
+        cols: 10,
         rowHeight: 30,
         onLayoutChange: function() {}
     };
@@ -23,7 +23,6 @@ class Grid extends React.PureComponent {
         const layout = this.generateLayout();
         this.state = { layout };
     }
-
     generateDOM() {
         function handleClick(e) {
             e.preventDefault();
@@ -31,7 +30,11 @@ class Grid extends React.PureComponent {
         }
 
         return this.props.grid.map((grid) =>
-            <a key={grid.id} href="#" onClick={handleClick}>
+            <a key={grid.id} href="#" onClick={handleClick} ref={(el) => {
+                if (el) {
+                    el.style.setProperty('background-color', grid.color, 'important')
+                }
+            }}>
             <span className="text">{grid.message}</span>
         </a>);
 
@@ -40,10 +43,10 @@ class Grid extends React.PureComponent {
     generateLayout() {
         const p = this.props;
         return _.map(new Array(p.items), function(item, i) {
-            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 1;
+            var y = _.result(p, "y") || Math.ceil(Math.random() * 4) + 2.5;
             return {
-                x: (i * 2) % 12,
-                y: Math.floor(i / 6) * y,
+                x: (i * 2) % 10,
+                y: Math.floor(i / 5) * y,
                 w: 2,
                 h: y,
                 i: i.toString()

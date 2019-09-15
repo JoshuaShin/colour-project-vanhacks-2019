@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from  './App';
 import * as firebase from 'firebase';
+import './CreateMessage.css';
 
 var config = {
     apiKey: "AIzaSyCyMLAjq-lqu-hmHLNPx7vWOSWhClBhF7I",

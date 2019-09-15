@@ -1,14 +1,11 @@
-.modalTeal {
-    transition: background-color 0.5s ease;
-    background-color: #ace8dc;
-}
+
 .modalGreen {
     transition: background-color 0.5s ease;
     background-color: #b5eecd;
 }
 .modalBlue {
     transition: background-color 0.5s ease;
-    background-color: #b7dbf3;
+    background-color: #b4d3e8;
 }
 .modalViolet {
     transition: background-color 0.5s ease;
@@ -32,15 +29,11 @@
 }
 .modalGrey {
     transition: background-color 0.5s ease;
-    background-color: #dbe1e1;
-}
-.modalBlack {
-    transition: background-color 0.5s ease;
-    background-color: #b8bfc7;
+    background-color: #C6CBD2;
 }
 
-.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet {
-    padding: 12px;
+.modal {
+    padding: 20px;
     font-size: 12px;
 }
 .modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .header {
@@ -69,7 +62,7 @@
     right: -10px;
     top: -10px;
     font-size: 24px;
-    background: #ffffff;
+    /*background: #ffffff;*/
     border-radius: 18px;
     border: 1px solid #cfcece;
 }

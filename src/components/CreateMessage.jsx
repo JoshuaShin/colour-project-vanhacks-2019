@@ -87,21 +87,35 @@ export default class CreateMessage extends Component {
 
                         {/* ===== Color selection ===== */}
 
-                        <div>
-                            <Segment>
+                        {/*<div>*/}
+                        {/*    <Segment>*/}
                                 <Button.Group widths='5'>
+                                    {/*<Button*/}
+                                    {/*    style={{backgroundColor: '#ace8dc'}}*/}
+                                    {/*    onClick={() => {*/}
+                                    {/*        this.setState({backgroundColor: '#ace8dc'});*/}
+                                    {/*        this.saveColor('#ace8dc');*/}
+                                    {/*        this.updateButton();*/}
+                                    {/*        this.modalDivRef.current.className = "modalTeal";*/}
+                                    {/*        // this.focusRed();*/}
+                                    {/*    }}*/}
+                                    {/*    // onBlur={this.focusRed}*/}
+                                    {/*>*/}
+                                    {/*    curious*/}
+                                    {/*</Button>*/}
                                     <Button
-                                        style={{backgroundColor: '#ace8dc'}}
+                                        style={{backgroundColor: '#efc7de'}}
+
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#ace8dc'});
-                                            this.saveColor('#ace8dc');
+                                            this.setState({backgroundColor: '#efc7de'})
+                                            this.saveColor('#efc7de');
                                             this.updateButton();
-                                            this.modalDivRef.current.className = "modalTeal";
-                                            // this.focusRed();
+                                            this.modalDivRef.current.className = "modalPink";
+
                                         }}
-                                        // onBlur={this.focusRed}
+                                        // onBlur={this.lockButton}
                                     >
-                                        curious
+                                        love
                                     </Button>
                                     <Button
                                         style={{backgroundColor: '#b5eecd'}}
@@ -119,11 +133,11 @@ export default class CreateMessage extends Component {
                                         peace
                                     </Button>
                                     <Button
-                                        style={{backgroundColor: '#b7dbf3'}}
+                                        style={{backgroundColor: '#b4d3e8'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#b7dbf3'})
-                                            this.saveColor('#b7dbf3');
+                                            this.setState({backgroundColor: '#b4d3e8'})
+                                            this.saveColor('#b4d3e8');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalBlue";
 
@@ -145,20 +159,6 @@ export default class CreateMessage extends Component {
                                         // onBlur={this.lockButton}
                                     >
                                         anxiety
-                                    </Button>
-                                    <Button
-                                        style={{backgroundColor: '#efc7de'}}
-
-                                        onClick={() => {
-                                            this.setState({backgroundColor: '#efc7de'})
-                                            this.saveColor('#efc7de');
-                                            this.updateButton();
-                                            this.modalDivRef.current.className = "modalPink";
-
-                                        }}
-                                        // onBlur={this.lockButton}
-                                    >
-                                        love
                                     </Button>
                                 </Button.Group>
 
@@ -205,28 +205,28 @@ export default class CreateMessage extends Component {
                                     >
                                         anger
                                     </Button>
+                                    {/*<Button*/}
+                                    {/*    style={{backgroundColor: '#dbe1e1'}}*/}
+
+                                    {/*    onClick={() => {*/}
+                                    {/*        this.setState({backgroundColor: '#dbe1e1'})*/}
+                                    {/*        this.saveColor('#dbe1e1');*/}
+                                    {/*        this.updateButton();*/}
+                                    {/*        this.modalDivRef.current.className = "modalGrey";*/}
+
+                                    {/*    }}*/}
+                                    {/*    // onBlur={this.lockButton}*/}
+                                    {/*>*/}
+                                    {/*    sadness*/}
+                                    {/*</Button>*/}
                                     <Button
-                                        style={{backgroundColor: '#dbe1e1'}}
+                                        style={{backgroundColor: '#C6CBD2'}}
 
                                         onClick={() => {
-                                            this.setState({backgroundColor: '#dbe1e1'})
-                                            this.saveColor('#dbe1e1');
+                                            this.setState({backgroundColor: '#C6CBD2'})
+                                            this.saveColor('#C6CBD2');
                                             this.updateButton();
                                             this.modalDivRef.current.className = "modalGrey";
-
-                                        }}
-                                        // onBlur={this.lockButton}
-                                    >
-                                        sadness
-                                    </Button>
-                                    <Button
-                                        style={{backgroundColor: '#b8bfc7'}}
-
-                                        onClick={() => {
-                                            this.setState({backgroundColor: '#b8bfc7'})
-                                            this.saveColor('#b8bfc7');
-                                            this.updateButton();
-                                            this.modalDivRef.current.className = "modalBlack";
 
                                         }}
                                         // onBlur={this.lockButton}
@@ -234,8 +234,8 @@ export default class CreateMessage extends Component {
                                         grief
                                     </Button>
                                 </Button.Group>
-                            </Segment>
-                        </div>
+                        {/*    </Segment>*/}
+                        {/*</div>*/}
 
 
                         {/*<Dropdown*/}
@@ -254,6 +254,7 @@ export default class CreateMessage extends Component {
 
 
                         {/* ===== Submit button ===== */}
+                        <br />
                         <br />
                         <div className="actions">
                             {/*<Popup*/}

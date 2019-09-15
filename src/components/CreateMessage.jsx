@@ -1,21 +1,9 @@
 import React, { Component, createRef } from 'react';
 import Popup from "reactjs-popup";
-import { Form, TextArea, Button, Segment, Header } from 'semantic-ui-react'
+import { Form, TextArea, Button, Segment, Header, Dropdown } from 'semantic-ui-react'
 
 export default class CreateMessage extends Component {
-    redButtonRef = createRef();
-    focusRed = () => {
-        if (this.state.yourColor === "#ff695e") {
-            this.redButtonRef.current.focus();
-        }
-    };
-
-    yellowButtonRef = createRef();
-    focusYellow = () => {
-        if (this.state.yourColor === "#ffe21f") {
-            this.yellowButtonRef.current.focus();
-        }
-    };
+    modalDivRef = createRef();
 
     constructor (props) {
         super(props);
@@ -52,19 +40,62 @@ export default class CreateMessage extends Component {
 
     onSubmit = () => {
         console.log(this.state.yourMessage + this.state.yourColor);
-        this.close();
     };
 
+    // dropdownChange(e) {
+    //     let {name, value} = e.target;
+    //
+    //     console.log(name);
+    //     console.log(value);
+    //
+    //     this.setState({
+    //         [name]: value,
+    //     });
+    // }
+    //
+    // colorOptions = [
+    //     {
+    //         key: '#ff695e',
+    //         text: 'anger',
+    //         value: '#ff695e',
+    //         image: { avatar: true, src: 'https://www.colorhexa.com/ff695e.png' },
+    //     },
+    //     {
+    //         key: '#ffe21f',
+    //         text: 'joy',
+    //         value: '#ffe21f',
+    //         image: { avatar: true, src: 'https://www.colorhexa.com/ffe21f.png' },
+    //     },
+    //     {
+    //         key: '#2ecc40',
+    //         text: 'peace',
+    //         value: '#2ecc40',
+    //         image: { avatar: true, src: 'https://www.colorhexa.com/2ecc40.png' },
+    //     },
+    //     {
+    //         key: '#54c8ff',
+    //         text: 'sad',
+    //         value: '#54c8ff',
+    //         image: { avatar: true, src: 'https://www.colorhexa.com/54c8ff.png' },
+    //     },
+    //     {
+    //         key: '#a291fb',
+    //         text: 'anxiety',
+    //         value: '#a291fb',
+    //         image: { avatar: true, src: 'https://www.colorhexa.com/a291fb.png' },
+    //     },
+    // ];
+
+
     render() {
-        const { backgroundColor } = this.state;
         const { yourMessage } = this.state;
         const { yourColor } = this.state;
 
         return (
             <Popup trigger={<Button className="button"> new message </Button>} modal>
                 {close => (
-                    <div className="modal">
-                        {/*<div className="modal" style={{backgroundColor: backgroundColor}}>*/}
+                    <div className="modal" ref={this.modalDivRef} >
+                    {/*<div className="modal" style={{backgroundColor: yourColor}}>*/}
 
 
                         {/* ===== Directions ===== */}
@@ -103,14 +134,12 @@ export default class CreateMessage extends Component {
                         <div>
                             <Segment>
                                 <Button
-                                    ref={this.redButtonRef}
-
                                     inverted color='red'
-
                                     onClick={() => {
                                         this.setState({backgroundColor: '#ff695e'});
                                         this.saveColor('#ff695e');
                                         this.updateButton();
+                                        this.modalDivRef.current.className = "modalRed";
                                         // this.focusRed();
                                     }}
                                     // onBlur={this.focusRed}
@@ -118,13 +147,14 @@ export default class CreateMessage extends Component {
                                     anger
                                 </Button>
                                 <Button
-                                    ref={this.yellowButtonRef}
-
                                     inverted color='yellow'
                                     onClick={() => {
                                         this.setState({backgroundColor: '#ffe21f'})
                                         this.saveColor('#ffe21f');
                                         this.updateButton();
+
+                                        this.modalDivRef.current.className = "modalYellow";
+
                                         // this.focusYellow();
                                     }}
                                     // onBlur={this.focusYellow}
@@ -137,6 +167,8 @@ export default class CreateMessage extends Component {
                                         this.setState({backgroundColor: '#2ecc40'})
                                         this.saveColor('#2ecc40');
                                         this.updateButton();
+                                        this.modalDivRef.current.className = "modalGreen";
+
                                     }}
                                     // onBlur={this.lockButton}
                                 >
@@ -148,6 +180,8 @@ export default class CreateMessage extends Component {
                                         this.setState({backgroundColor: '#54c8ff'})
                                         this.saveColor('#54c8ff');
                                         this.updateButton();
+                                        this.modalDivRef.current.className = "modalBlue";
+
                                     }}
                                     // onBlur={this.lockButton}
                                 >
@@ -159,6 +193,8 @@ export default class CreateMessage extends Component {
                                         this.setState({backgroundColor: '#a291fb'})
                                         this.saveColor('#a291fb');
                                         this.updateButton();
+                                        this.modalDivRef.current.className = "modalViolet";
+
                                     }}
                                     // onBlur={this.lockButton}
                                 >
@@ -168,8 +204,23 @@ export default class CreateMessage extends Component {
                         </div>
 
 
-                        {/* ===== Submit button ===== */}
+                        {/*<Dropdown*/}
+                        {/*    placeholder='Select Friend'*/}
+                        {/*    fluid*/}
+                        {/*    selection*/}
+                        {/*    options={this.colorOptions}*/}
 
+                        {/*    onChange={this.dropdownChange}*/}
+
+                        {/*    onChange = {e => {*/}
+                        {/*        this.dropdownChange(e);*/}
+
+                        {/*    }}*/}
+                        {/*/>*/}
+
+
+                        {/* ===== Submit button ===== */}
+                        <br />
                         <div className="actions">
                             {/*<Popup*/}
                             {/*    trigger={<button className="button"> color </button>}*/}
@@ -188,6 +239,7 @@ export default class CreateMessage extends Component {
                                 className="button"
                                 onClick={() => {
                                     this.onSubmit();
+                                    close();
                                 }}
                             >
                                 submit

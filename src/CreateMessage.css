@@ -1,25 +1,45 @@
-.modal {
+.modalRed {
+    transition: background-color 0.5s ease;
+    background-color: red;
+}
+.modalYellow {
+    transition: background-color 0.5s ease;
+    background-color: yellow;
+}
+.modalGreen {
+    transition: background-color 0.5s ease;
+    background-color: green;
+}
+.modalBlue {
+    transition: background-color 0.5s ease;
+    background-color: blue;
+}
+.modalViolet {
+    transition: background-color 0.5s ease;
+    background-color: violet;
+}
+.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet {
     padding: 12px;
     font-size: 12px;
 }
-.modal > .header {
+.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .header {
     width: 100%;
     border-bottom: 1px solid gray;
     font-size: 18px;
     text-align: center;
     padding: 5px;
 }
-.modal > .content {
+.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .content {
     width: 100%;
     padding: 10px 5px;
 }
-.modal > .actions {
+.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .actions {
     width: 100%;
     padding: 10px 5px;
     margin: auto;
     text-align: center;
 }
-.modal > .close {
+.modal.modalRed.modalYellow.modalGreen.modalBlue.modalViolet > .close {
     cursor: pointer;
     position: absolute;
     display: block;

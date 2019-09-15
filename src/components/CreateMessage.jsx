@@ -12,12 +12,8 @@ export default class CreateMessage extends Component {
             inputValue: '',
             backgroundColor: '',
             yourMessage: '',
-            yourColor: '#ffffff'
+            yourColor: '#f2f5fb'
         }
-    };
-
-    resetYourColor = () => {
-        this.setState({ yourColor: '#ffffff' });
     };
 
     saveMessage = message => {
@@ -26,10 +22,6 @@ export default class CreateMessage extends Component {
 
     saveColor = color => {
         this.setState({ yourColor: color });
-    };
-
-    lockButton = () => {
-        this.setState({ ready: false });
     };
 
     updateButton = () => {
@@ -42,51 +34,6 @@ export default class CreateMessage extends Component {
         console.log(this.state.yourMessage + this.state.yourColor);
     };
 
-    // dropdownChange(e) {
-    //     let {name, value} = e.target;
-    //
-    //     console.log(name);
-    //     console.log(value);
-    //
-    //     this.setState({
-    //         [name]: value,
-    //     });
-    // }
-    //
-    // colorOptions = [
-    //     {
-    //         key: '#ff695e',
-    //         text: 'anger',
-    //         value: '#ff695e',
-    //         image: { avatar: true, src: 'https://www.colorhexa.com/ff695e.png' },
-    //     },
-    //     {
-    //         key: '#ffe21f',
-    //         text: 'joy',
-    //         value: '#ffe21f',
-    //         image: { avatar: true, src: 'https://www.colorhexa.com/ffe21f.png' },
-    //     },
-    //     {
-    //         key: '#2ecc40',
-    //         text: 'peace',
-    //         value: '#2ecc40',
-    //         image: { avatar: true, src: 'https://www.colorhexa.com/2ecc40.png' },
-    //     },
-    //     {
-    //         key: '#54c8ff',
-    //         text: 'sad',
-    //         value: '#54c8ff',
-    //         image: { avatar: true, src: 'https://www.colorhexa.com/54c8ff.png' },
-    //     },
-    //     {
-    //         key: '#a291fb',
-    //         text: 'anxiety',
-    //         value: '#a291fb',
-    //         image: { avatar: true, src: 'https://www.colorhexa.com/a291fb.png' },
-    //     },
-    // ];
-
-
     render() {
         const { yourMessage } = this.state;
         const { yourColor } = this.state;
@@ -94,8 +41,8 @@ export default class CreateMessage extends Component {
         return (
             <Popup trigger={<Button className="button"> new message </Button>} modal>
                 {close => (
-                    <div className="modal" ref={this.modalDivRef} >
-                    {/*<div className="modal" style={{backgroundColor: yourColor}}>*/}
+                    <div className="modal" ref={this.modalDivRef} style={{backgroundColor: this.yourColor}}>
+                    {/*<div className="modal" ref={this.modalDivRef} >*/}
 
 
                         {/* ===== Directions ===== */}
@@ -133,73 +80,151 @@ export default class CreateMessage extends Component {
 
                         <div>
                             <Segment>
-                                <Button
-                                    inverted color='red'
-                                    onClick={() => {
-                                        this.setState({backgroundColor: '#ff695e'});
-                                        this.saveColor('#ff695e');
-                                        this.updateButton();
-                                        this.modalDivRef.current.className = "modalRed";
-                                        // this.focusRed();
-                                    }}
-                                    // onBlur={this.focusRed}
-                                >
-                                    anger
-                                </Button>
-                                <Button
-                                    inverted color='yellow'
-                                    onClick={() => {
-                                        this.setState({backgroundColor: '#ffe21f'})
-                                        this.saveColor('#ffe21f');
-                                        this.updateButton();
+                                <Button.Group widths='5'>
+                                    <Button
+                                        style={{backgroundColor: '#ace8dc'}}
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#ace8dc'});
+                                            this.saveColor('#ace8dc');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalRed";
+                                            // this.focusRed();
+                                        }}
+                                        // onBlur={this.focusRed}
+                                    >
+                                        curious
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#b5eecd'}}
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#b5eecd'})
+                                            this.saveColor('#b5eecd');
+                                            this.updateButton();
 
-                                        this.modalDivRef.current.className = "modalYellow";
+                                            this.modalDivRef.current.className = "modalYellow";
 
-                                        // this.focusYellow();
-                                    }}
-                                    // onBlur={this.focusYellow}
-                                >
-                                    joy
-                                </Button>
-                                <Button
-                                    inverted color='green'
-                                    onClick={() => {
-                                        this.setState({backgroundColor: '#2ecc40'})
-                                        this.saveColor('#2ecc40');
-                                        this.updateButton();
-                                        this.modalDivRef.current.className = "modalGreen";
+                                            // this.focusYellow();
+                                        }}
+                                        // onBlur={this.focusYellow}
+                                    >
+                                        peace
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#b7dbf3'}}
 
-                                    }}
-                                    // onBlur={this.lockButton}
-                                >
-                                    peace
-                                </Button>
-                                <Button
-                                    inverted color='blue'
-                                    onClick={() => {
-                                        this.setState({backgroundColor: '#54c8ff'})
-                                        this.saveColor('#54c8ff');
-                                        this.updateButton();
-                                        this.modalDivRef.current.className = "modalBlue";
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#b7dbf3'})
+                                            this.saveColor('#b7dbf3');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalGreen";
 
-                                    }}
-                                    // onBlur={this.lockButton}
-                                >
-                                    sad
-                                </Button>
-                                <Button
-                                    inverted color='violet'
-                                    onClick={() => {
-                                        this.setState({backgroundColor: '#a291fb'})
-                                        this.saveColor('#a291fb');
-                                        this.updateButton();
-                                        this.modalDivRef.current.className = "modalViolet";
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        sadness
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#ddc5e7'}}
 
-                                    }}
-                                    // onBlur={this.lockButton}
-                                >
-                                    anxious
-                                </Button>
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#ddc5e7'});
+                                            this.saveColor('#ddc5e7');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalBlue";
+
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        anxiety
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#efc7de'}}
+
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#efc7de'})
+                                            this.saveColor('#efc7de');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalViolet";
+
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        love
+                                    </Button>
+                                </Button.Group>
+
+                                <Button.Group widths='5'>
+                                    <Button
+                                        style={{backgroundColor: '#faeba6'}}
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#faeba6'});
+                                            this.saveColor('#faeba6');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalRed";
+                                            // this.focusRed();
+                                        }}
+                                        // onBlur={this.focusRed}
+                                    >
+                                        happy
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#f6d2ae'}}
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#f6d2ae'})
+                                            this.saveColor('#f6d2ae');
+                                            this.updateButton();
+
+                                            this.modalDivRef.current.className = "modalYellow";
+
+                                            // this.focusYellow();
+                                        }}
+                                        // onBlur={this.focusYellow}
+                                    >
+                                        excitement
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#f8c1ba'}}
+
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#f8c1ba'})
+                                            this.saveColor('#f8c1ba');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalGreen";
+
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        anger
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#dbe1e1'}}
+
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#dbe1e1'})
+                                            this.saveColor('#dbe1e1');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalBlue";
+
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        sadness
+                                    </Button>
+                                    <Button
+                                        style={{backgroundColor: '#b8bfc7'}}
+
+                                        onClick={() => {
+                                            this.setState({backgroundColor: '#b8bfc7'})
+                                            this.saveColor('#b8bfc7');
+                                            this.updateButton();
+                                            this.modalDivRef.current.className = "modalViolet";
+
+                                        }}
+                                        // onBlur={this.lockButton}
+                                    >
+                                        grief
+                                    </Button>
+                                </Button.Group>
                             </Segment>
                         </div>
 

@@ -23,12 +23,52 @@ body {
 .react-grid-item {
     box-sizing: border-box;
 }
+
+/* ========================================================================================== */
 .react-grid-item:not(.react-grid-placeholder) {
     background: #ccc;
-    border: 1px solid black;
+    transition: transform .2s;
+    scroll-behavior: smooth;
+    overflow: auto;
+    text-decoration: none;
+    color: black;
+    outline : none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    font-family: arial, sans-serif;
 }
+
+.react-grid-item:not(.react-grid-placeholder)::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(to top, transparent 0%, transparent 100%);
+}
+
+.react-grid-item:not(.react-grid-placeholder)::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 69, 69, 0.0);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.0),inset 0 -1px 0 rgba(69,69,69,0.0);
+}
+
+
+
+/* Card effects*/
+.react-grid-item:not(.react-grid-placeholder):hover{
+    transform: scale(1.5)!important;
+}
+
+.react-grid-item:not(.react-grid-placeholder):hover::-webkit-scrollbar-thumb,
+.react-grid-item:not(.react-grid-placeholder):focus::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 69, 69, 0.1);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(69,69,69,0.15),inset 0 -1px 0 rgba(69,69,69,0.15);
+}
+
+/* ========================================================================================= */
+
 .react-grid-item.resizing {
-    opacity: 0.9;
+    opacity: 0.1;
 }
 .react-grid-item.static {
     background: #cce;

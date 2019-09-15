@@ -1,37 +1,58 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import Popup from "reactjs-popup";
 import { Form, TextArea, Button, Segment, Header } from 'semantic-ui-react'
 
 export default class CreateMessage extends Component {
+    redButtonRef = createRef();
+    focusRed = () => {
+        if (this.state.yourColor === "#ff695e") {
+            this.redButtonRef.current.focus();
+        }
+    };
 
-    yourStory = "";
+    yellowButtonRef = createRef();
+    focusYellow = () => {
+        if (this.state.yourColor === "#ffe21f") {
+            this.yellowButtonRef.current.focus();
+        }
+    };
 
     constructor (props) {
         super(props);
         this.state = {
+            ready: false,
             inputValue: '',
             backgroundColor: '',
             yourMessage: '',
-            yourColor: ''
+            yourColor: '#ffffff'
         }
     };
 
-    saveMessage = message => {
-        //this.setState({ yourMessage });
-        this.setState({ yourMessage: message.target.value.substr(0, 100) });
+    resetYourColor = () => {
+        this.setState({ yourColor: '#ffffff' });
+    };
 
-        //this.state.yourMessage = message;
+    saveMessage = message => {
+        this.setState({ yourMessage: message.target.value.substr(0, 1000) });
     };
 
     saveColor = color => {
-        //this.setState({ yourMessage });
         this.setState({ yourColor: color });
+    };
 
-        //this.state.yourMessage = color;
+    lockButton = () => {
+        this.setState({ ready: false });
+    };
+
+    updateButton = () => {
+        if (this.state.yourMessage.length) {
+            this.setState({ ready: true });
+        }
     };
 
     onSubmit = () => {
-        // this.setState();
+        console.log(this.state.yourMessage + this.state.yourColor);
+        this.close();
     };
 
     render() {
@@ -82,19 +103,31 @@ export default class CreateMessage extends Component {
                         <div>
                             <Segment>
                                 <Button
+                                    ref={this.redButtonRef}
+
                                     inverted color='red'
+
                                     onClick={() => {
                                         this.setState({backgroundColor: '#ff695e'});
                                         this.saveColor('#ff695e');
+                                        this.updateButton();
+                                        // this.focusRed();
                                     }}
+                                    // onBlur={this.focusRed}
                                 >
                                     anger
                                 </Button>
                                 <Button
+                                    ref={this.yellowButtonRef}
+
                                     inverted color='yellow'
                                     onClick={() => {
                                         this.setState({backgroundColor: '#ffe21f'})
+                                        this.saveColor('#ffe21f');
+                                        this.updateButton();
+                                        // this.focusYellow();
                                     }}
+                                    // onBlur={this.focusYellow}
                                 >
                                     joy
                                 </Button>
@@ -102,7 +135,10 @@ export default class CreateMessage extends Component {
                                     inverted color='green'
                                     onClick={() => {
                                         this.setState({backgroundColor: '#2ecc40'})
+                                        this.saveColor('#2ecc40');
+                                        this.updateButton();
                                     }}
+                                    // onBlur={this.lockButton}
                                 >
                                     peace
                                 </Button>
@@ -110,7 +146,10 @@ export default class CreateMessage extends Component {
                                     inverted color='blue'
                                     onClick={() => {
                                         this.setState({backgroundColor: '#54c8ff'})
+                                        this.saveColor('#54c8ff');
+                                        this.updateButton();
                                     }}
+                                    // onBlur={this.lockButton}
                                 >
                                     sad
                                 </Button>
@@ -118,7 +157,10 @@ export default class CreateMessage extends Component {
                                     inverted color='violet'
                                     onClick={() => {
                                         this.setState({backgroundColor: '#a291fb'})
+                                        this.saveColor('#a291fb');
+                                        this.updateButton();
                                     }}
+                                    // onBlur={this.lockButton}
                                 >
                                     anxious
                                 </Button>
@@ -142,10 +184,10 @@ export default class CreateMessage extends Component {
                             {/*    </span>*/}
                             {/*</Popup>*/}
                             <Button
+                                disabled={!this.state.ready || !this.state.yourMessage}
                                 className="button"
                                 onClick={() => {
-                                    this.setState({backgroundColor: '#ffffff'}) // here I want to change the color to red
-                                    close();
+                                    this.onSubmit();
                                 }}
                             >
                                 submit

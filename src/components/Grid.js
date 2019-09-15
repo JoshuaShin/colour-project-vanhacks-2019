@@ -1,18 +1,24 @@
 import React from "react";
 import _ from "lodash";
 import RGL, { WidthProvider } from "react-grid-layout";
+import firebaseConfig from '../firebase'
+
+import getNumOfCards from '../firebaseUpdate'
 
 const ReactGridLayout = WidthProvider(RGL);
 
+// var numCards = 9;
 class Grid extends React.PureComponent {
 
-    numCards = this.props.numOfCards;
-
+    // static numOfCards = getNumOfCards();
     static defaultProps = {
+
         className: "layout",
         isDraggable: false,
         isResizable: false,
-        items: this.numCards, //limit of how many cards in can be on the page.
+        items: function(){
+            return getNumOfCards;
+        }, //limit of how many cards in can be on the page.
         cols: 12,
         rowHeight: 30,
         onLayoutChange: function() {}
@@ -56,7 +62,7 @@ class Grid extends React.PureComponent {
     render() {
         console.log(this.props.grid.map((grid) => grid.message));
         // var message = this.props.grid.message;
-        console.log(this.props.numOfCards);
+
         return (
             <ReactGridLayout
                 layout={this.state.layout}

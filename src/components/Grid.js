@@ -4,15 +4,15 @@ import RGL, { WidthProvider } from "react-grid-layout";
 
 const ReactGridLayout = WidthProvider(RGL);
 
-// var numCards = 9;
 class Grid extends React.PureComponent {
 
+    numCards = this.props.numOfCards;
 
     static defaultProps = {
         className: "layout",
         isDraggable: false,
         isResizable: false,
-        items: 100, //limit of how many cards in can be on the page.
+        items: this.numCards, //limit of how many cards in can be on the page.
         cols: 12,
         rowHeight: 30,
         onLayoutChange: function() {}
@@ -56,7 +56,7 @@ class Grid extends React.PureComponent {
     render() {
         console.log(this.props.grid.map((grid) => grid.message));
         // var message = this.props.grid.message;
-
+        console.log(this.props.numOfCards);
         return (
             <ReactGridLayout
                 layout={this.state.layout}

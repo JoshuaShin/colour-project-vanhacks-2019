@@ -34,6 +34,15 @@ export default class CreateMessage extends Component {
         console.log(this.state.yourMessage + this.state.yourColor);
     };
 
+    randomGreet = () => {
+        const greets = ["Tell us your story!",
+                        "What's in your mind?",
+                        "Tell us about your day!",
+                        "Did something happen?",
+                        "Any good news?"];
+        return greets[Math.floor(Math.random() * Math.floor(4))];
+    };
+
     render() {
         const { yourMessage } = this.state;
         const { yourColor } = this.state;
@@ -52,7 +61,7 @@ export default class CreateMessage extends Component {
                         {/*</a>*/}
                         {/*<div className="header"> Title </div>*/}
                         <div className="content">
-                            <Header as='h1' style={{color: "#36454f"}}> Share your story with us! </Header>
+                            <Header as='h1' style={{color: "#212529"}}> {this.randomGreet()} </Header>
                         </div>
 
 

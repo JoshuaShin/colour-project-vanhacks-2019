@@ -1,14 +1,11 @@
 import React from "react";
 import _ from "lodash";
 import RGL, { WidthProvider } from "react-grid-layout";
-// import * as firebase from 'firebase';
 
 
 const ReactGridLayout = WidthProvider(RGL);
 
 class Grid extends React.PureComponent {
-
-    // numCards = this.props.numOfCards;
 
     static defaultProps = {
         className: "layout",
@@ -54,9 +51,8 @@ class Grid extends React.PureComponent {
     }
 
     render() {
-        // console.log(this.props.grid.map((grid) => grid.id));
-        // var message = this.props.grid.message;
-        // console.log(this.props.numOfCards);
+        console.log(this.props.grid.map((grid) => grid));
+
         return (
             <ReactGridLayout
                 layout={this.state.layout}

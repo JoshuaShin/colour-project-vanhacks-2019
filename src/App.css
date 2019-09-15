@@ -13,7 +13,7 @@ body {
 
 .App {
     position: absolute;
-    height: 200%;
+    height: 222%;
     width: 100%;
     z-index: 0;
 }
@@ -27,7 +27,7 @@ body {
 
 .react-grid-item {
     box-sizing: border-box;
-    top: 69px;
+    top: 120px;
     border: 2px solid black;
 }
 

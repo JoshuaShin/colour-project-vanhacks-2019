@@ -6,7 +6,6 @@ html, body {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    /*background: linear-gradient(to top right, #cc99ff 0%, #FF6F61 100%)!important;*/
 }
 ::-webkit-scrollbar-thumb {
     background-color: rgba(69, 69, 69, 0.4);
@@ -35,8 +34,6 @@ html, body {
 .addButton:hover {
     transform: translate(0, 4px) scale(1.2);
     color: #FA9A85;
-    /*background-color: red;*/
-    /*color: black;*/
 }
 
 .toTop:hover {
@@ -45,18 +42,14 @@ html, body {
 
 
 
-.animate-zoom {animation:animatezoom 1s}
-@keyframes animatezoom{from{transform:scale(0)} to {transform:scale(1)}}
-
-.color_change {animation: mymove 4s;}
-@keyframes mymove {
-    0%   {background: #53DED3;}
+.animate {animation:animatezoom 2s !important;}
+@keyframes animatezoom{from{transform:scale(0)} to {transform:scale(1)}
+    0%   {background: #53DED3; border-color: transparent; border-radius: 0%}
     12.5%  {background: #b460ec;}
     25%  {background: #ff0027;}
     37.5%  {background: #ff377e;}
     50% {background: #cfec60;}
     62.5%  {background: #109876;}
     75%  {background: #007BFF;}
-    100%  {background: transparent;}
-
+    100%  {background: transparent; border-color: transparent; border-radius: 0}
 }

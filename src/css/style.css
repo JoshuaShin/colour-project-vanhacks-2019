@@ -29,11 +29,12 @@ html, body {
     color: black;
     font-weight: 900;
     font-size: 42px;
-
+    user-select: none;
 }
 
 .addButton:hover {
-    background-color: red;
-    color: black;
+    transform: translate(0, 4px) scale(1.2);
+    /*background-color: red;*/
+    /*color: black;*/
 }
 

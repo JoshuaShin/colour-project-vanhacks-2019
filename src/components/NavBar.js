@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from './logo.js'
 import CreateMessage from "./CreateMessage";
 
 
@@ -23,8 +24,10 @@ class NavBar extends React.Component {
         }
         return (
             <div style={this.navBarStyle} className={'navBar'}>
+                <Logo/>
+                <a className={'addButton'} href={{href:'#'}} onClick={handleClickk}> + </a>
                 <CreateMessage />
-                {/*<a className={'addButton'} href={{href:'#'}} onClick={handleClick}> + </a>*/}
+
             </div>
 
         )

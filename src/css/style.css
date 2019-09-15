@@ -42,14 +42,27 @@ html, body {
 
 
 
-.animate {animation:animatezoom 2s !important;}
-@keyframes animatezoom{from{transform:scale(0)} to {transform:scale(1)}
-    0%   {background: #53DED3; border-color: transparent; border-radius: 0%}
+.animate {animation:mymove 3s !important;}
+@keyframes mymove {
+    0%   {background: #53DED3;}
     12.5%  {background: #b460ec;}
     25%  {background: #ff0027;}
     37.5%  {background: #ff377e;}
     50% {background: #cfec60;}
     62.5%  {background: #109876;}
     75%  {background: #007BFF;}
-    100%  {background: transparent; border-color: transparent; border-radius: 0}
+    100%  {background: transparent;}
 }
+
+.animate:hover {animation: mymove2 3s !important;}
+@keyframes mymove2 {
+    0%   {background: #53DED3;}
+    12.5%  {background: #b460ec;}
+    25%  {background: #ff0027;}
+    37.5%  {background: #ff377e;}
+    50% {background: #cfec60;}
+    62.5%  {background: #109876;}
+    75%  {background: #007BFF;}
+    100%  {background: transparent;}
+}
+

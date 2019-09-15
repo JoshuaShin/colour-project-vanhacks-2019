@@ -47,54 +47,33 @@ import * as firebase from 'firebase';
 //     return "123456";
 // }
 //
-function getMessage(){
-    return "hi";
-}
+
 
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            cardId: getMessage(),
-            numOfCards:[],
-            card: [{
-                    id: 1,
-                    message: "hello world"
-                },
-                {
-                    id: 2,
-                    message: "hello"
-                },
-                {
-                    id: 3,
-                    message: "hi"
-                },
-                {
-                    id: 4,
-                    message: "hello"
-                }]
+            numOfCards:0,
+            card: []
         };
     }
 
     componentDidMount() {
         const cardRoot = firebase.database().ref().child('cards/');
-        var count = 0;
+        // var count = 0;
         // const cardRef = rootRef.child('cardId');
         cardRoot.once('value').then((snapshot) => {
-            let list = snapshot.val();
-            for (list in list) {
-                count += 1;
+            let list = [snapshot.val()];
+            for (var key in list) {
+                var cardData = list[key];
             }
-            console.log(count);
 
             this.setState({
-                numOfCards: count
+                card: cardData
             });
 
         });
-
-
     }
 
     // state = {
@@ -118,7 +97,6 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h3> {this.state.cardId} </h3>
                 <h4> {this.state.numOfCards}</h4>
                 <Grid grid={this.state.card} numOfCards={this.state.card} />
             </div>
